@@ -22,10 +22,14 @@
     </nav>
 
     <!-- SECTIONS -->
-    <section id="accueil">
-        <h2>Accueil</h2>
-        <p>Maxence Mangin</p>
-        <p>20 ans</p>
+    <section id="accueil" class="main-header">
+        <div class="photo-container">
+            <img src="./img/Photo maxence.jpg" alt="Photo de profil de Maxence Mangin">
+        </div>
+        
+        <h1>Maxence Mangin</h1>
+        <p class="role">Étudiant en Informatique - BUT 2</p>
+        <p class="details">20 ans</p>
     </section>
 
     <section id="formations">
@@ -37,8 +41,25 @@
     </section>
 
     <section id="competences">
-        <h2>Compétences</h2>
-        <p>Java / html / css / sql / c</p>
+        <h2>Compétences Techniques</h2>
+        
+        <ul class="competences-list">
+            <li>
+                <img src="./img/logo-java.png" alt="Logo Java">
+            </li>
+            <li>
+                <img src="./img/logo-html.png" alt="Logo HTML5">
+            </li>
+            <li>
+                <img src="./img/logo-css.png" alt="Logo CSS3">
+            </li>
+            <li>
+                <img src="./img/logo-sql.png" alt="Logo SQL">
+            </li>
+            <li>
+                <img src="./img/logo-c.png" alt="Logo Langage C">
+            </li>
+            </ul>
     </section>
 
     <section id="experiences">
@@ -50,8 +71,39 @@
 
     <section id="realisations">
         <h2>Réalisations</h2>
-        <p>Java : Labyrinthe, jeu rpg, jeu de math, Gestion d'etudiant</p>
-        <p>Html / css : site écologique de nintendo</p>
+        
+        <div class="slider-container">
+            <button class="prev-button">‹</button>
+    
+            <ul class="slider">
+                <li class="slide">
+                    <h3>Labyrinthe (Java)</h3>
+                    <p>Développement d'un jeu de labyrinthe en console/interface graphique.</p>
+                </li>
+                <li class="slide">
+                    <h3>Jeu RPG (Java)</h3>
+                    <p>Création d'un jeu de rôle avec gestion d'inventaire et combats, en utilisant la méthode Agile sur 3 jours.</p>
+                </li>
+                <li class="slide">
+                    <h3>Site Écologique Nintendo (HTML/CSS)</h3>
+                    <p>Conception et intégration d'un site web respectant les standards écologiques pour un produit Nintendo (Responsive design).</p>
+                </li>
+                <li class="slide">
+                    <h3>Application d'affection Etudiant (Java)</h3>
+                    <p>Nous devions réalisé une application pour affecter des étudiants de différent pays permettant de faire une cohabitation</p>
+                </li>
+                <li class="slide">
+                    <h3>Elaboration d'une base de donnée</h3>
+                    <p>Conception et intégration d'un site web respectant les standards écologiques pour un produit Nintendo (Responsive design).</p>
+                </li>
+                <li class="slide">
+                    <h3>Installation de poste</h3>
+                    <p>Conception et intégration d'un site web respectant les standards écologiques pour un produit Nintendo (Responsive design).</p>
+                </li>
+                </ul>
+            
+            <button class="next-button">›</button>
+        </div>
     </section>
 
     <section id="contact">
@@ -60,6 +112,8 @@
         <p>mail : maxencemangin59@gmail.com</p>
         <p>Linkedin</p>
     </section>
+
+    <script src="js/script.js"></script>
 
 </body>
 </html>
