@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV Numérique</title>
+    <title>Maxence Mangin - CV Numérique</title>
+    <link rel="icon" type="image/jpeg" href="./img/Photo maxence.jpg">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-    <!-- NAVIGATION -->
     <nav class="navbar">
         <ul>
             <li><a href="#accueil">Accueil</a></li>
@@ -21,12 +21,10 @@
         </ul>
     </nav>
 
-    <!-- SECTIONS -->
     <section id="accueil" class="main-header">
         <div class="photo-container">
             <img src="./img/Photo maxence.jpg" alt="Photo de profil de Maxence Mangin">
         </div>
-        
         <h1>Maxence Mangin</h1>
         <p class="role">Étudiant en Informatique - BUT 2</p>
         <p class="details">20 ans</p>
@@ -34,73 +32,145 @@
 
     <section id="formations">
         <h2>Formations</h2>
-        <p>Baccalauréat Lycée saint vincent de paul à Loos</p>
-        <p>PSC1 Lycée saint vincent de paul à Loos</p>
-        <p> </p>
-        <p></p>
+    
+        <div class="formation-item">
+            <div class="form-header">
+                <h3>BUT Informatique (Bac +3)</h3>
+                <span class="date">2024 - Présent</span>
+            </div>
+            <p class="institution">IUT de Lille - Site de Villeneuve d'Ascq</p>
+            <ul>
+                <li>Spécialité : Réalisation d'applications.</li>
+                <li>Apprentissage de l'algorithmique, du développement Web (HTML/CSS/) et SQL.</li>
+                <li>Travail en mode projet (méthodes agiles, Git).</li>
+            </ul>
+        </div>
+    
+        <div class="formation-item">
+            <div class="form-header">
+                <h3>Baccalauréat</h3>
+                <span class="date">2023</span>
+            </div>
+            <p class="institution">Lycée Saint-Vincent de Paul, Loos</p>
+            <ul>
+                <li>Sciences et technologies de la santé et du social
+                </li>
+            </ul>
+        </div>
+    
+        <div class="formation-item">
+            <div class="form-header">
+                <h3>PSC1 (Secourisme)</h3>
+                <span class="date">Validé</span>
+            </div>
+            <p class="institution">Lycée Saint-Vincent de Paul, Loos</p>
+            <p class="desc">Prévention et Secours Civiques de niveau 1.</p>
+        </div>
     </section>
 
     <section id="competences">
         <h2>Compétences Techniques</h2>
-        
         <ul class="competences-list">
-            <li>
-                <img src="./img/logo-java.png" alt="Logo Java">
-            </li>
-            <li>
-                <img src="./img/logo-html.png" alt="Logo HTML5">
-            </li>
-            <li>
-                <img src="./img/logo-css.png" alt="Logo CSS3">
-            </li>
-            <li>
-                <img src="./img/logo-sql.png" alt="Logo SQL">
-            </li>
-            <li>
-                <img src="./img/logo-c.png" alt="Logo Langage C">
-            </li>
-            </ul>
+            <li><img src="./img/logo-java.png" alt="Java"><span>Java</span></li>
+            <li><img src="./img/logo-html.png" alt="HTML5"><span>HTML5</span></li>
+            <li><img src="./img/logo-css.png" alt="CSS3"><span>CSS3</span></li>
+            <li><img src="./img/logo-sql.png" alt="SQL"><span>SQL</span></li>
+            <li><img src="./img/logo-c.png" alt="C"><span>C</span></li>
+        </ul>
     </section>
 
     <section id="experiences">
         <h2>Expériences</h2>
-        <p>Stage Infirmier 2 mois</p>
-        <p>Stage d'immersion en data</p>
-        <p>Animateur centre de loisirs</p>
+    
+        <div class="experience-item">
+            <div class="exp-header">
+                <h3>Stage d'immersion en Data</h3>
+                <span class="date">2024</span>
+            </div>
+            <p class="company">Entreprise / Organisation</p>
+            <ul>
+                <li>Découverte de l'écosystème Big Data et de l'analyse de données.</li>
+                <li>Observation de la gestion de bases de données et des flux d'informations.</li>
+                <li>Sensibilisation aux enjeux de la cybersécurité.</li>
+            </ul>
+        </div>
+    
+        <div class="experience-item">
+            <div class="exp-header">
+                <h3>Animateur de centre de loisirs</h3>
+                <span class="date">2022</span>
+            </div>
+            <p class="company">Mairie / Association</p>
+            <ul>
+                <li>Gestion et animation de groupes d'enfants (responsabilité et sécurité).</li>
+                <li>Organisation d'activités pédagogiques et gestion de planning.</li>
+                <li>Travail en équipe et communication avec les parents.</li>
+            </ul>
+        </div>
+    
+        <div class="experience-item">
+            <div class="exp-header">
+                <h3>Stage Infirmier</h3>
+                <span class="date">2 mois</span>
+            </div>
+            <p class="company">Établissement de santé</p>
+            <ul>
+                <li>Application rigoureuse de protocoles d'hygiène et de soins.</li>
+                <li>Gestion du stress dans un environnement à haute responsabilité.</li>
+                <li>Sens du contact humain et accompagnement des patients.</li>
+            </ul>
+        </div>
     </section>
 
     <section id="realisations">
         <h2>Réalisations</h2>
-        
         <div class="slider-container">
             <button class="prev-button">‹</button>
-    
             <ul class="slider">
-                <li class="slide">
+
+                <li class="slide"
+                    data-details="Développement d'un jeu de labyrinthe. Utilisation de Java Swing pour l'interface et algorithmes de recherche de chemin."
+                    data-stack="Java">
                     <h3>Labyrinthe (Java)</h3>
-                    <p>Développement d'un jeu de labyrinthe en console/interface graphique.</p>
+                    <p>Développement d'un jeu de labyrinthe en console/graphique.</p>
                 </li>
-                <li class="slide">
+            
+                <li class="slide"
+                    data-details="Création d'un RPG complet : système de combat, inventaire, et statistiques. Projet mené en équipe avec la méthode Agile."
+                    data-stack="Java / Agile">
                     <h3>Jeu RPG (Java)</h3>
-                    <p>Création d'un jeu de rôle avec gestion d'inventaire et combats, en utilisant la méthode Agile sur 3 jours.</p>
+                    <p>Jeu de rôle avec gestion d'inventaire et combats (Agile).</p>
                 </li>
-                <li class="slide">
-                    <h3>Site Écologique Nintendo (HTML/CSS)</h3>
-                    <p>Conception et intégration d'un site web respectant les standards écologiques pour un produit Nintendo (Responsive design).</p>
+            
+                <li class="slide"
+                    data-details="Intégration d'un site respectant les critères d'éco-conception : code léger, images optimisées et accessibilité."
+                    data-stack="HTML / CSS">
+                    <h3>Site Nintendo (Eco)</h3>
+                    <p>Site web respectant les standards écologiques.</p>
                 </li>
-                <li class="slide">
-                    <h3>Application d'affection Etudiant (Java)</h3>
-                    <p>Nous devions réalisé une application pour affecter des étudiants de différent pays permettant de faire une cohabitation</p>
+            
+                <li class="slide"
+                    data-details="Application Java permettant de gérer l'affectation et la cohabitation d'étudiants de différentes nationalités."
+                    data-stack="Java / JavaFX">
+                    <h3>Affectation Étudiant</h3>
+                    <p>Logiciel d'aide à la cohabitation internationale.</p>
                 </li>
-                <li class="slide">
-                    <h3>Elaboration d'une base de donnée</h3>
-                    <p>Conception et intégration d'un site web respectant les standards écologiques pour un produit Nintendo (Responsive design).</p>
+            
+                <li class="slide"
+                    data-details="Conception d'un schéma relationnel (MCD) et implémentation d'une base de données SQL pour une structure complexe."
+                    data-stack="SQL">
+                    <h3>Base de données</h3>
+                    <p>Conception et intégration d'une base SQL optimisée.</p>
                 </li>
-                <li class="slide">
-                    <h3>Installation de poste</h3>
-                    <p>Conception et intégration d'un site web respectant les standards écologiques pour un produit Nintendo (Responsive design).</p>
+            
+                <li class="slide"
+                    data-details="Installation, configuration logicielle et matérielle de postes informatiques en environnement professionnel."
+                    data-stack="Hardware / Support IT">
+                    <h3>Installation Poste</h3>
+                    <p>Configuration et maintenance de matériel informatique.</p>
                 </li>
-                </ul>
+            
+            </ul>
             
             <button class="next-button">›</button>
         </div>
@@ -108,12 +178,25 @@
 
     <section id="contact">
         <h2>Contact</h2>
-        <p>Numero : 06 95 54 90 13</p>
-        <p>mail : maxencemangin59@gmail.com</p>
-        <p>Linkedin</p>
+        <ul>
+            <li><strong>Téléphone :</strong> 06 95 54 90 13</li>
+            <li><strong>E-mail :</strong> <a href="mailto:maxencemangin59@gmail.com">maxencemangin59@gmail.com</a></li>
+            <li><strong>LinkedIn :</strong> <a href="https://www.linkedin.com/in/maxence-mangin-758ab5300/" target="_blank">Profil LinkedIn</a></li>
+        </ul>
+        <a href="./doc/Maxence_Mangin_CV.pdf" download class="download-link">
+            Imprimer / Télécharger mon CV (PDF)
+        </a>
     </section>
 
-    <script src="js/script.js"></script>
+    <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 id="modal-title"></h2>
+            <hr>
+            <div id="modal-body"></div>
+        </div>
+    </div>
 
+    <script src="js/script.js"></script>
 </body>
 </html>

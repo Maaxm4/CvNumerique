@@ -1,5 +1,4 @@
 /* RESET */
-
 html {
     scroll-behavior: smooth;
 }
@@ -14,12 +13,11 @@ html {
 /* 1. STYLES GÉNÉRAUX ET COULEURS */
 /* ==================================== */
 
-/* BODY */
 body {
     font-family: Arial, sans-serif;
-    /* Dégradé plus prononcé, allant du haut vers le bas */
-    background: linear-gradient(to bottom, #F0F0F0 0%, #D8D8D8 100%); 
-    color: #444444; /* Texte principal en Gris foncé */
+    /* Dégradé bleu/gris très léger pour remplacer le gris pur */
+    background: linear-gradient(to bottom, #F5F7FA 0%, #B8C6DB 100%); 
+    color: #444444; 
     line-height: 1.6;
     min-height: 100vh;
 }
@@ -50,11 +48,11 @@ body {
 }
 
 .navbar a:hover {
-    color: #B22222; /* Rouge Bordeaux pour le survol */
+    color: #1e3a8a; /* Bleu au survol */
 }
 
 /* ==================================== */
-/* 2. STYLES DES SECTIONS DÉTAILS (Formations, Expériences, Contact) */
+/* 2. STYLES DES SECTIONS */
 /* ==================================== */
 
 section {
@@ -65,21 +63,18 @@ section {
     margin: 140px auto 30px auto; 
     border-radius: 10px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-    
-    /* Correction pour la navigation fixe */
-    scroll-margin-top: 70px;
+    scroll-margin-top: 80px;
 }
 
 h2 {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     padding-bottom: 0.3rem;
-    /* Titre et ligne de séparation en Rouge Bordeaux */
-    color: #B22222; 
-    border-bottom: 2px solid #B22222; 
+    color: #1e3a8a; /* Bleu Indigo */
+    border-bottom: 2px solid #1e3a8a; 
 }
 
 /* ==================================== */
-/* 3. STYLES SPÉCIFIQUES ACCUEIL (Plein Écran Centré) */
+/* 3. ACCUEIL */
 /* ==================================== */
 
 #accueil.main-header {
@@ -88,19 +83,13 @@ h2 {
     padding: 0;
     width: 100%;
     max-width: none;
-    background: transparent; /* Permet de voir le dégradé du body */
+    background: transparent;
     box-shadow: none;
-    border-radius: 0;
-
     display: flex;
     flex-direction: column;
     justify-content: center; 
     align-items: center; 
     text-align: center;
-}
-
-#accueil h2 {
-    display: none; 
 }
 
 .photo-container {
@@ -109,7 +98,7 @@ h2 {
     border-radius: 50%;
     overflow: hidden;
     margin-bottom: 1.5rem;
-    box-shadow: 0 0 0 5px #B22222, 0 0 0 7px #fff; 
+    box-shadow: 0 0 0 5px #1e3a8a, 0 0 0 7px #fff; 
 }
 
 .photo-container img {
@@ -120,121 +109,222 @@ h2 {
 
 #accueil h1 {
     font-size: 2.5em;
-    color: #B22222; 
+    color: #1e3a8a; 
     margin-bottom: 0.2rem;
-    border-bottom: none; 
 }
 
 #accueil .role {
     font-size: 1.3em;
     font-weight: bold;
-    color: #444444;
     margin-bottom: 0.5rem; 
 }
 
 /* ==================================== */
-/* 4. STYLES SPÉCIFIQUES CARROUSEL (RÉALISATIONS) */
+/* 4. FORMATIONS & EXPÉRIENCES */
+/* ==================================== */
+
+.formation-item, .experience-item {
+    margin-bottom: 2.5rem;
+    padding-left: 1.5rem;
+    border-left: 3px solid #1e3a8a;
+    text-align: left;
+}
+
+.form-header, .exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    margin-bottom: 0.5rem;
+}
+
+.formation-item h3, .experience-item h3 {
+    color: #333;
+    font-size: 1.2rem;
+}
+
+.date {
+    font-style: italic;
+    color: #1e3a8a;
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+.institution, .company {
+    font-weight: bold;
+    color: #666;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+}
+
+ul { padding-left: 1.2rem; }
+li { margin-bottom: 0.3rem; }
+
+/* ==================================== */
+/* 5. RÉALISATIONS (CARROUSEL) */
 /* ==================================== */
 
 .slider-container {
     position: relative; 
     overflow: hidden; 
     width: 100%;
+    padding: 10px 0;
 }
 
 .slider {
     display: flex; 
     list-style: none;
-    padding: 0;
-    margin: 0;
-    
-    /* Transition CSS pour l'animation (contrôlée par JS) */
     transition: transform 0.5s ease-in-out; 
 }
 
 .slide {
-    /* CLÉ pour afficher 3 éléments : 100% divisé par 3 */
     min-width: calc(100% / 3); 
-    box-sizing: border-box;
-    padding: 1rem;
+    padding: 1.5rem;
     text-align: center;
-    
-    background: #F8F8F8; /* Léger fond pour le slide */
+    background: #F8F8F8;
     border-radius: 8px;
-    margin-right: 1rem; /* Espacement entre les projets */
+    margin-right: 1rem;
     box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    cursor: pointer; 
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.slide:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 .slide h3 {
-    color: #B22222;
+    color: #1e3a8a;
+    font-size: 1.1rem;
     margin-bottom: 0.5rem;
 }
 
-/* Styles pour les flèches de navigation */
 .prev-button, .next-button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: #B22222; 
+    background: #1e3a8a; 
     color: white;
     border: none;
-    padding: 10px 15px;
+    width: 40px;
+    height: 40px;
     cursor: pointer;
     font-size: 1.5rem;
     z-index: 10;
     border-radius: 50%;
-    opacity: 0.8;
-    transition: opacity 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.prev-button:hover, .next-button:hover {
-    opacity: 1;
-}
+.prev-button { left: 5px; }
+.next-button { right: 5px; }
 
-.prev-button {
-    left: 0;
-    padding-left: 10px; 
-}
-
-.next-button {
-    right: 0;
-    padding-right: 10px;
-}
-
-/* STYLES SPÉCIFIQUES POUR LA SECTION COMPÉTENCES */
+/* ==================================== */
+/* 6. COMPÉTENCES */
+/* ==================================== */
 
 .competences-list {
-    display: flex; /* Active l'alignement horizontal */
-    flex-wrap: wrap; /* Permet de passer à la ligne si l'écran est petit */
-    justify-content: center; /* Centre les logos */
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center;
     list-style: none;
-    padding: 0;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 .competences-list li {
     display: flex;
-    flex-direction: column; /* Aligne le logo au-dessus du nom */
+    flex-direction: column;
     align-items: center;
-    margin: 1rem 1.5rem; /* Espacement entre chaque compétence */
-    text-align: center;
+    margin: 1rem 1.5rem;
 }
 
 .competences-list img {
-    width: 60px;  /* Taille du logo */
+    width: 60px;
     height: 60px;
     object-fit: contain;
     margin-bottom: 0.5rem;
     transition: transform 0.3s;
 }
 
-/* Effet au survol (optionnel, pour plus d'interactivité) */
-.competences-list li:hover img {
-    transform: scale(1.1);
+.competences-list li:hover img { transform: scale(1.1); }
+.competences-list span { font-weight: bold; font-size: 0.9em; }
+
+/* ==================================== */
+/* 7. CONTACT & TÉLÉCHARGEMENT */
+/* ==================================== */
+
+#contact ul { list-style: none; padding: 0; }
+#contact li { margin-bottom: 0.8rem; }
+
+.download-link {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 12px 25px;
+    background-color: #1e3a8a;
+    color: white !important;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
 }
 
-.competences-list span {
-    font-weight: bold;
-    font-size: 0.9em;
-    color: #444444; /* Gris foncé */
+.download-link:hover { background-color: #3b82f6; }
+
+/* ==================================== */
+/* 8. MODALE (FENÊTRE DE DÉTAILS) */
+/* ==================================== */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 3000; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 2.5rem;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+    border-top: 8px solid #1e3a8a;
+    animation: fadeIn 0.4s ease-out;
+}
+
+.modal-content hr {
+    margin: 1rem 0;
+    border: 0;
+    border-top: 1px solid #eee;
+}
+
+#modal-body p {
+    color: #555;
+    font-size: 1.05rem;
+}
+
+.close-modal {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: #aaa;
+    line-height: 1;
+}
+
+.close-modal:hover { color: #1e3a8a; }
+
+@keyframes fadeIn {
+    from { transform: translateY(-30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
 }
