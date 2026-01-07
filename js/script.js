@@ -63,13 +63,26 @@ document.addEventListener('DOMContentLoaded', () => {
             const title = slide.querySelector('h3').innerText;
             const details = slide.getAttribute('data-details');
             const stack = slide.getAttribute('data-stack');
-            
+            const gitLink = slide.getAttribute('data-git');
+    
             modalTitle.innerText = title;
-            modalBody.innerHTML = `<p>${details}</p><br><p><strong>Stack :</strong> ${stack}</p>`;
-
+    
+            modalBody.innerHTML = `
+                <p>${details}</p>
+                <br>
+                <p><strong>Stack :</strong> ${stack}</p>
+                ${gitLink ? `
+                    <br>
+                    <a href="${gitLink}" target="_blank" class="git-link">
+                        Voir le projet sur Git
+                    </a>
+                ` : ''}
+            `;
+    
             modal.style.display = "block";
         }
     });
+    
 
     closeBtn.onclick = () => modal.style.display = "none";
     window.onclick = (e) => { if (e.target == modal) modal.style.display = "none"; }

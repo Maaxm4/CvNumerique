@@ -324,6 +324,23 @@ li { margin-bottom: 0.3rem; }
 
 .close-modal:hover { color: #1e3a8a; }
 
+.git-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 16px;
+    background-color: #24292e;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.git-link:hover {
+    background-color: #444;
+}
+
+
 @keyframes fadeIn {
     from { transform: translateY(-30px); opacity: 0; }
     to { transform: translateY(0); opacity: 1; }
