@@ -1,218 +1,382 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maxence Mangin - CV Numérique</title>
-    <link rel="icon" type="image/jpeg" href="./img/Photo maxence.jpg">
-    <link rel="stylesheet" href="css/style.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Maxence Mangin - CV Numérique</title>
+        <link rel="icon" type="image/jpeg" href="./img/Photo maxence.jpg">
+        <link rel="stylesheet" href="css/base.css">
+        <link rel="stylesheet" href="css/effects.css">
+        <link rel="stylesheet" href="css/navbar.css">
+        <link rel="stylesheet" href="css/home.css">
+        <link rel="stylesheet" href="css/planets.css">
+        <link rel="stylesheet" href="css/content.css">
+        <link rel="stylesheet" href="css/skills.css">
+        <link rel="stylesheet" href="css/projects.css">
+        <link rel="stylesheet" href="css/modal.css">
+        <script src="js/script.js" defer></script>
+    </head>
 
-<body>
+    <body>
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
 
-    <nav class="navbar">
-        <ul>
-            <li><a href="#accueil">Accueil</a></li>
-            <li><a href="#formations">Formations</a></li>
-            <li><a href="#competences">Compétences</a></li>
-            <li><a href="#experiences">Expériences</a></li>
-            <li><a href="#realisations">Réalisations</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+        <nav class="navbar">
+            <a href="#accueil">Accueil</a>
+            <a href="#formations">Formations</a>
+            <a href="#competences">Compétences</a>
+            <a href="#experiences">Expériences</a>
+            <a href="#realisations">Réalisation</a>
+            <a href="#contact">Contact</a>
+        </nav>
 
-    <section id="accueil" class="main-header">
-        <div class="photo-container">
-            <img src="./img/Photo maxence.jpg" alt="Photo de profil de Maxence Mangin">
-        </div>
-        <h1>Maxence Mangin</h1>
-        <p class="role">Étudiant en Informatique - BUT 2</p>
-        <p class="details">20 ans</p>
-    </section>
-
-    <section id="formations">
-        <h2>Formations</h2>
-    
-        <div class="formation-item">
-            <div class="form-header">
-                <h3>BUT Informatique (Bac +3)</h3>
-                <span class="date">2024 - Présent</span>
+        <section id="accueil" class="accueil">
+            <div class="photo">
+                <img src="./img/Photo maxence.jpg" alt="Maxence Mangin">
             </div>
-            <p class="institution">IUT de Lille - Site de Villeneuve d'Ascq</p>
-            <ul>
-                <li>Spécialité : Réalisation d'applications.</li>
-                <li>Apprentissage de l'algorithmique, du développement Web (HTML/CSS/) et SQL.</li>
-                <li>Travail en mode projet (méthodes agiles, Git).</li>
-            </ul>
-        </div>
-    
-        <div class="formation-item">
-            <div class="form-header">
-                <h3>Baccalauréat</h3>
-                <span class="date">2023</span>
+            <h1>Maxence Mangin</h1>
+            <p class ="role">Étudiant en Informatique - BUT 2</p>
+            <p class ="age">20 ans</p>
+        </section>
+
+        <section id="formations" class="block mercure">
+
+            <div class="planet"></div>
+
+            <div class="content">
+                <h2>Formations</h2>
+
+                <div class="formation-item">
+                    <h3>BUT Informatique (Bac +3)</h3>
+                    <span>2024 - Présent</span>
+
+                    <p>IUT de Lille - Site de Villeneuve d'Ascq</p>
+
+                    <ul>
+                        <li>Spécialité : Réalisation d'applications</li>
+                        <li>Développement Web (HTML/CSS), algorithmique et SQL</li>
+                        <li>Travail en mode projet avec Git et méthodes agiles</li>
+                    </ul>
+                </div>
+
+                <div class="formation-item">
+                    <h3>Baccalauréat</h3>
+                    <span>2023</span>
+
+                    <p>Lycée Saint-Vincent de Paul, Loos</p>
+
+                    <ul>
+                        <li>Sciences et technologies de la santé et du social</li>
+                    </ul>
+                </div>
+
+                <div class="formation-item">
+                    <h3>PSC1 (Secourisme)</h3>
+                    <span>Validé</span>
+
+                    <p>Lycée Saint-Vincent de Paul, Loos</p>
+
+                    <ul>
+                        <li>Prévention et Secours Civiques de niveau 1</li>
+                    </ul>
+                </div>
+
             </div>
-            <p class="institution">Lycée Saint-Vincent de Paul, Loos</p>
-            <ul>
-                <li>Sciences et technologies de la santé et du social
-                </li>
-            </ul>
-        </div>
-    
-        <div class="formation-item">
-            <div class="form-header">
-                <h3>PSC1 (Secourisme)</h3>
-                <span class="date">Validé</span>
+
+        </section>
+
+        <section id="competences" class="block venus">
+
+            <div class="planet"></div>
+
+            <div class="content">
+
+                <h2>Compétences</h2>
+
+                <h3>Langages</h3>
+
+                <div class="skills">
+                    <div class="skill">
+                        <img src="./img/logo-java.png" alt="Java">
+                        <span>Java</span>
+                    </div>
+
+                    <div class="skill">
+                        <img src="./img/logo-html.png" alt="HTML">
+                        <span>HTML5</span>
+                    </div>
+
+                    <div class="skill">
+                        <img src="./img/logo-css.png" alt="CSS">
+                        <span>CSS3</span>
+                    </div>
+
+                    <div class="skill">
+                        <img src="./img/logo-sql.png" alt="SQL">
+                        <span>SQL</span>
+                    </div>
+
+                    <div class="skill">
+                        <img src="./img/logo-c.png" alt="C">
+                        <span>C</span>
+                    </div>
+                    <div class="skill">
+                        <img src="./img/logo-python.png" alt="Pyhton">
+                        <span>Python</span>
+                    </div>
+                </div>
+
+                <h3>Outils</h3>
+
+                <div class="skills">
+                    <div class="skill">
+                        <img src="./img/logo-git.png" alt="Git">
+                        <span>Git / GitHub</span>
+                    </div>
+
+                    <div class="skill">
+                        <img src="./img/logo-vscode.png" alt="VSCode">
+                        <span>VS Code</span>
+                    </div>
+
+                    <div class="skill">
+                        <img src="./img/logo-intellij.png" alt="IntelliJ">
+                        <span>IntelliJ IDEA</span>
+                    </div>
+                </div>
+
             </div>
-            <p class="institution">Lycée Saint-Vincent de Paul, Loos</p>
-            <p class="desc">Prévention et Secours Civiques de niveau 1.</p>
-        </div>
-    </section>
 
-    <section id="competences">
-        <h2>Compétences Techniques</h2>
-    
-        <h3>Langages</h3>
-        <ul class="competences-list">
-            <li><img src="./img/logo-java.png" alt="Java"><span>Java</span></li>
-            <li><img src="./img/logo-html.png" alt="HTML5"><span>HTML5</span></li>
-            <li><img src="./img/logo-css.png" alt="CSS3"><span>CSS3</span></li>
-            <li><img src="./img/logo-sql.png" alt="SQL"><span>SQL</span></li>
-            <li><img src="./img/logo-c.png" alt="C"><span>C</span></li>
-        </ul>
-    
-        <h3>Outils & Environnements</h3>
-        <ul class="competences-list">
-            <li><img src="./img/logo-git.png" alt="Git"><span>Git / GitHub</span></li>
-            <li><img src="./img/logo-vscode.png" alt="VS Code"><span>VS Code</span></li>
-            <li><img src="./img/logo-intellij.png" alt="IntelliJ"><span>IntelliJ IDEA</span></li>
-        </ul>
-    </section>
-    
+        </section>
 
-    <section id="experiences">
-        <h2>Expériences</h2>
-    
-        <div class="experience-item">
-            <div class="exp-header">
-                <h3>Stage d'immersion en Data</h3>
-                <span class="date">2024</span>
+        <section id="experiences" class="block terre">
+
+            <div class="planet"></div>
+
+            <div class="content">
+
+                <h2>Expériences</h2>
+
+                <div class="experience-item">
+                    <h3>Stage d'immersion en Système et Réseau</h3>
+                    <span>2024</span>
+
+                    <ul>
+                        <li>Découverte de l'écosystème Big Data</li>
+                        <li>Observation de bases de données et flux d'informations</li>
+                        <li>Sensibilisation à la cybersécurité</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <h3>Animateur de centre de loisirs</h3>
+                    <span>2022</span>
+
+                    <ul>
+                        <li>Gestion de groupes d'enfants</li>
+                        <li>Organisation d'activités pédagogiques</li>
+                        <li>Travail en équipe et communication</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <h3>Stage Infirmier</h3>
+                    <span>2 mois</span>
+
+                    <ul>
+                        <li>Application de protocoles d'hygiène et de soins</li>
+                        <li>Gestion du stress et responsabilités</li>
+                        <li>Accompagnement des patients</li>
+                    </ul>
+                </div>
+
             </div>
-            <p class="company">Entreprise / Organisation</p>
-            <ul>
-                <li>Découverte de l'écosystème Big Data et de l'analyse de données.</li>
-                <li>Observation de la gestion de bases de données et des flux d'informations.</li>
-                <li>Sensibilisation aux enjeux de la cybersécurité.</li>
-            </ul>
-        </div>
-    
-        <div class="experience-item">
-            <div class="exp-header">
-                <h3>Animateur de centre de loisirs</h3>
-                <span class="date">2022</span>
+
+        </section>
+
+        <section id="realisations" class="block mars">
+
+            <div class="planet"></div>
+
+            <div class="content">
+
+                <h2>Projets</h2>
+
+                <div class="projects">
+
+                    <div class="project-category">
+                        <h3 class="category-title">Projets personnels</h3>
+
+                        <div class="project-card"
+                            data-title="Projet perso"
+                            data-desc="Description de ton projet personnel ici."
+                            data-stack="..."
+                            data-link="https://gitlab.univ-lille.fr/...">
+
+                            <h4>Projet personnel</h4>
+                            <p>Mini description du projet personnel.</p>
+
+                            <div class="tags">
+                                <span>Python</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-category">
+                        <h3 class="category-title">Projets scolaires</h3>
+
+                        <div class="project-card"
+                            data-title="Labyrinthe (Java)"
+                            data-desc="Jeu de labyrinthe avec génération et résolution de chemin."
+                            data-stack="Java"
+                            data-link="https://gitlab.univ-lille.fr/...">
+
+                            <h4>Labyrinthe</h4>
+                            <p>Jeu avec génération et résolution automatique.</p>
+
+                            <div class="tags">
+                                <span>Java</span>
+                                <span>Algo</span>
+                            </div>
+                        </div>
+
+                        <div class="project-card"
+                            data-title="RPG Java"
+                            data-desc="Jeu de rôle avec combat, inventaire et stats."
+                            data-stack="Java / Agile"
+                            data-link="https://gitlab.univ-lille.fr/...">
+
+                            <h4>RPG Java</h4>
+                            <p>Jeu de rôle avec combat et inventaire.</p>
+
+                            <div class="tags">
+                                <span>Java</span>
+                                <span>Agile</span>
+                            </div>
+                        </div>
+
+                        <div class="project-card"
+                            data-title="Site éco-conçu"
+                            data-desc="Site optimisé en performance et accessibilité."
+                            data-stack="HTML / CSS"
+                            data-link="https://gitlab.univ-lille.fr/...">
+
+                            <h4>Site éco-conçu</h4>
+                            <p>Site web optimisé (performance + accessibilité).</p>
+
+                            <div class="tags">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                            </div>
+                        </div>
+
+                        <div class="project-card"
+                            data-title="Base de données SQL"
+                            data-desc="Conception et modélisation d'une base relationnelle."
+                            data-stack="SQL"
+                            data-link="https://gitlab.univ-lille.fr/...">
+
+                            <h4>Base de données</h4>
+                            <p>Modélisation et requêtes SQL.</p>
+
+                            <div class="tags">
+                                <span>SQL</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-category">
+                        <h3 class="category-title">Projets professionnels</h3>
+
+                        <div class="project-card"
+                            data-title="Application bancaire (Python FastAPI)"
+                            data-problem="Créer une application bancaire permettant de gérer des utilisateurs, comptes et transferts de manière sécurisée."
+                            data-desc="Développement d'une API REST complète permettant la gestion de comptes bancaires, la création d'utilisateurs et les transferts d'argent entre comptes. Architecture basée sur FastAPI avec séparation claire des couches (routes, services, modèles)."
+                            data-solution="Mise en place d'une API FastAPI avec SQLAlchemy pour la base de données, bcrypt pour la sécurité des mots de passe et une logique métier séparée pour assurer la maintenabilité."
+                            data-stack="Python - FastAPI - SQLAlchemy - SQLite - Bcrypt - Angular"
+                            data-link="https://gitlab.univ-lille.fr/...">
+
+                            <h4>Application bancaire</h4>
+                            <p>API de gestion de comptes et transferts sécurisés.</p>
+
+                            <div class="tags">
+                                <span>Python</span>
+                                <span>FastAPI</span>
+                                <span>SQL</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
             </div>
-            <p class="company">Mairie / Association</p>
-            <ul>
-                <li>Gestion et animation de groupes d'enfants (responsabilité et sécurité).</li>
-                <li>Organisation d'activités pédagogiques et gestion de planning.</li>
-                <li>Travail en équipe et communication avec les parents.</li>
-            </ul>
-        </div>
-    
-        <div class="experience-item">
-            <div class="exp-header">
-                <h3>Stage Infirmier</h3>
-                <span class="date">2 mois</span>
+
+        </section>
+
+        <section id="contact" class="block contact">
+
+            <div class="content">
+
+                <h2>Contact</h2>
+
+                <p><strong>Téléphone :</strong> 06 95 54 90 13</p>
+
+                <p>
+                    <strong>Email :</strong>
+                    <a href="mailto:maxencemangin59@gmail.com">
+                        maxencemangin59@gmail.com
+                    </a>
+                </p>
+
+                <p>
+                    <strong>LinkedIn :</strong>
+                    <a href="https://www.linkedin.com/in/maxence-mangin-758ab5300/" target="_blank">
+                        Voir le profil
+                    </a>
+                </p>
+
+                <p>
+                    <strong>GitHub :</strong>
+                    <a href="https://github.com/Maaxm4" target="_blank">
+                        github.com/Maaxm4
+                    </a>
+                </p>
+
             </div>
-            <p class="company">Établissement de santé</p>
-            <ul>
-                <li>Application rigoureuse de protocoles d'hygiène et de soins.</li>
-                <li>Gestion du stress dans un environnement à haute responsabilité.</li>
-                <li>Sens du contact humain et accompagnement des patients.</li>
-            </ul>
+        </section>
+
+        <div id="modal" class="modal hidden">
+            <div class="modal-content">
+
+                <span id="close">&times;</span>
+
+                <h2 id="modal-title"></h2>
+
+                <div class="modal-section">
+                    <h3>Problème</h3>
+                    <p id="modal-problem"></p>
+                </div>
+
+                <div class="modal-section">
+                    <h3>Description</h3>
+                    <p id="modal-desc"></p>
+                </div>
+
+                <div class="modal-section">
+                    <h3>Solution</h3>
+                    <p id="modal-solution"></p>
+                </div>
+
+                <div class="modal-section">
+                    <h3>Stack</h3>
+                    <p id="modal-stack"></p>
+                </div>
+
+                <a id="modal-link" target="_blank">Voir le projet</a>
+
+            </div>
         </div>
-    </section>
-
-    <section id="realisations">
-        <h2>Réalisations</h2>
-        <div class="slider-container">
-            <button class="prev-button">‹</button>
-            <ul class="slider">
-
-                <li class="slide"
-                    data-details="Développement d'un jeu de labyrinthe. Utilisation de Java Swing pour l'interface et algorithmes de recherche de chemin."
-                    data-stack="Java"
-                    data-git="https://gitlab.univ-lille.fr/sae302/2025/J1_SAE3.3">
-                    <h3>Labyrinthe (Java)</h3>
-                    <p>Développement d'un jeu de labyrinthe en console/graphique.</p>
-                </li>
-            
-                <li class="slide"
-                    data-details="Création d'un RPG complet : système de combat, inventaire, et statistiques. Projet mené en équipe avec la méthode Agile."
-                    data-stack="Java / Agile"
-                    data-git="https://gitlab.univ-lille.fr/iut-info/p3.01/2025-2026/groupe-1">
-                    <h3>Jeu RPG (Java)</h3>
-                    <p>Jeu de rôle avec gestion d'inventaire et combats (Agile).</p>
-                </li>
-            
-                <li class="slide"
-                    data-details="Intégration d'un site respectant les critères d'éco-conception : code léger, images optimisées et accessibilité."
-                    data-stack="HTML / CSS"
-                    data-git="https://gitlab.univ-lille.fr/TON_PROJET_LABYRINTHE">
-                    <h3>Site Nintendo (Eco)</h3>
-                    <p>Site web respectant les standards écologiques.</p>
-                </li>
-            
-                <li class="slide"
-                    data-details="Application Java permettant de gérer l'affectation et la cohabitation d'étudiants de différentes nationalités."
-                    data-stack="Java / JavaFX"
-                    data-git="https://gitlab.univ-lille.fr/sae2.01-2.02/2025/C4">
-                    <h3>Affectation Étudiant</h3>
-                    <p>Logiciel d'aide à la cohabitation internationale.</p>
-                </li>
-            
-                <li class="slide"
-                    data-details="Conception d'un schéma relationnel (MCD) et implémentation d'une base de données SQL pour une structure complexe."
-                    data-stack="SQL"
-                    data-git="https://gitlab.univ-lille.fr/TON_PROJET_LABYRINTHE">
-                    <h3>Base de données</h3>
-                    <p>Conception et intégration d'une base SQL optimisée.</p>
-                </li>
-            
-                <li class="slide"
-                    data-details="Installation, configuration logicielle et matérielle de postes informatiques en environnement professionnel."
-                    data-stack="Hardware / Support IT"
-                    data-git="https://gitlab.univ-lille.fr/loise.vigneron.etu/sae-2.03">
-                    <h3>Installation Poste</h3>
-                    <p>Configuration et maintenance de matériel informatique.</p>
-                </li>
-            
-            </ul>
-            
-            <button class="next-button">›</button>
-        </div>
-    </section>
-
-    <section id="contact">
-        <h2>Contact</h2>
-        <ul>
-            <li><strong>Téléphone :</strong> 06 95 54 90 13</li>
-            <li><strong>E-mail :</strong> <a href="mailto:maxencemangin59@gmail.com">maxencemangin59@gmail.com</a></li>
-            <li><strong>LinkedIn :</strong> <a href="https://www.linkedin.com/in/maxence-mangin-758ab5300/" target="_blank">Profil LinkedIn</a></li>
-        </ul>
-        <a href="./doc/Maxence_Mangin_CV.pdf" download class="download-link">
-            Imprimer / Télécharger mon CV (PDF)
-        </a>
-    </section>
-
-    <div id="project-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <h2 id="modal-title"></h2>
-            <hr>
-            <div id="modal-body"></div>
-        </div>
-    </div>
-
-    <script src="js/script.js"></script>
-</body>
+    </body>
 </html>

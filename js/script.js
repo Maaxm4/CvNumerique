@@ -1,90 +1,80 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const slider = document.querySelector('.slider');
-    const slides = Array.from(document.querySelectorAll('.slide'));
-    const prevButton = document.querySelector('.prev-button');
-    const nextButton = document.querySelector('.next-button');
-    const modal = document.getElementById('project-modal');
-    const modalTitle = document.getElementById('modal-title');
-    const modalBody = document.getElementById('modal-body');
-    const closeBtn = document.querySelector('.close-modal');
-    
-    const slidesToShow = 3;
-    let currentIndex = 0;
-    const totalSlides = slides.length;
+function createStars(id, count) {
+    const container = document.getElementById(id);
 
-    // 1. Cloner les éléments pour l'infini
-    for (let i = 0; i < slidesToShow; i++) {
-        slider.appendChild(slides[i].cloneNode(true));
+    for (let i = 0; i < count; i++) {
+        const star = document.createElement("div");
+
+        const size = Math.random() * 2;
+
+        star.style.position = "absolute";
+        star.style.width = size + "px";
+        star.style.height = size + "px";
+        star.style.background = "white";
+        star.style.borderRadius = "50%";
+
+        star.style.top = Math.random() * 100 + "%";
+        star.style.left = Math.random() * 100 + "%";
+
+        star.style.opacity = Math.random();
+        star.style.animation = `twinkle ${2 + Math.random() * 5}s infinite`;
+
+        container.appendChild(star);
     }
+}
 
-    function getSlideWidth() {
-        const margin = parseFloat(getComputedStyle(slides[0]).marginRight) || 0;
-        return slides[0].offsetWidth + margin;
-    }
+createStars("stars", 120);
+createStars("stars2", 80);
+createStars("stars3", 50);
 
-    function updateSliderPosition() {
-        slider.style.transform = `translateX(-${currentIndex * getSlideWidth()}px)`;
-    }
+const modal = document.getElementById("modal");
+const closeBtn = document.getElementById("close");
 
-    // 2. Navigation
-    nextButton.addEventListener('click', () => {
-        currentIndex++;
-        slider.style.transition = "transform 0.5s ease-in-out";
-        updateSliderPosition();
-        if (currentIndex >= totalSlides) {
-            setTimeout(() => {
-                slider.style.transition = "none";
-                currentIndex = 0;
-                updateSliderPosition();
-            }, 500);
+const modalTitle = document.getElementById("modal-title");
+const modalDesc = document.getElementById("modal-desc");
+const modalStack = document.getElementById("modal-stack");
+const modalLink = document.getElementById("modal-link");
+
+const modalProblem = document.getElementById("modal-problem");
+const modalSolution = document.getElementById("modal-solution");
+
+document.querySelectorAll(".project-card").forEach(card => {
+    card.addEventListener("click", () => {
+
+        modalTitle.textContent = card.dataset.title || "";
+
+        if (modalProblem) {
+            modalProblem.textContent = card.dataset.problem || "";
         }
-    });
 
-    prevButton.addEventListener('click', () => {
-        if (currentIndex === 0) {
-            slider.style.transition = "none";
-            currentIndex = totalSlides;
-            updateSliderPosition();
-            setTimeout(() => {
-                slider.style.transition = "transform 0.5s ease-in-out";
-                currentIndex--;
-                updateSliderPosition();
-            }, 50);
+        modalDesc.textContent = card.dataset.desc || "";
+
+        if (modalSolution) {
+            modalSolution.textContent = card.dataset.solution || "";
+        }
+
+        modalStack.textContent = "Stack : " + (card.dataset.stack || "");
+
+        if (card.dataset.link) {
+            modalLink.href = card.dataset.link;
+            modalLink.style.display = "inline-block";
         } else {
-            currentIndex--;
-            updateSliderPosition();
+            modalLink.style.display = "none";
         }
-    });
 
-    // 3. Gestion de la Modale (Délégation d'événement)
-    slider.addEventListener('click', (e) => {
-        const slide = e.target.closest('.slide');
-        if (slide) {
-            const title = slide.querySelector('h3').innerText;
-            const details = slide.getAttribute('data-details');
-            const stack = slide.getAttribute('data-stack');
-            const gitLink = slide.getAttribute('data-git');
-    
-            modalTitle.innerText = title;
-    
-            modalBody.innerHTML = `
-                <p>${details}</p>
-                <br>
-                <p><strong>Stack :</strong> ${stack}</p>
-                ${gitLink ? `
-                    <br>
-                    <a href="${gitLink}" target="_blank" class="git-link">
-                        Voir le projet sur Git
-                    </a>
-                ` : ''}
-            `;
-    
-            modal.style.display = "block";
-        }
+        modal.classList.remove("hidden");
     });
-    
+});
 
-    closeBtn.onclick = () => modal.style.display = "none";
-    window.onclick = (e) => { if (e.target == modal) modal.style.display = "none"; }
-    window.addEventListener('resize', updateSliderPosition);
+function closeModal() {
+    modal.classList.add("hidden");
+}
+
+closeBtn.addEventListener("click", closeModal);
+
+modal.addEventListener("click", (e) => {
+    if (e.target === modal) closeModal();
+});
+
+document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeModal();
 });

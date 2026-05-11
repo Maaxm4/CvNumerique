@@ -1,0 +1,151 @@
+/* =========================
+   MODAL BACKDROP
+========================= */
+
+.modal {
+    position: fixed;
+    inset: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(8px);
+
+    z-index: 2000;
+
+    opacity: 1;
+    transition: opacity 0.25s ease;
+}
+
+.modal.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* =========================
+   MODAL BOX
+========================= */
+
+.modal-content {
+    width: 500px;
+    max-width: 92%;
+
+    padding: 28px 30px;
+
+    background: rgba(15, 20, 40, 0.92);
+    border: 1px solid rgba(79, 195, 247, 0.25);
+    border-radius: 18px;
+
+    color: #d8dee9;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.6),
+        0 0 30px rgba(79, 195, 247, 0.15);
+
+    transform: translateY(10px);
+    animation: modalIn 0.25s ease forwards;
+
+    position: relative;
+}
+
+/* animation entrée */
+@keyframes modalIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* =========================
+   TITRES
+========================= */
+
+.modal-content h2 {
+    font-size: 1.6rem;
+    color: #4fc3f7;
+    margin-bottom: 12px;
+}
+
+/* sections texte */
+.modal-content p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+/* labels (stack / etc) */
+.modal-content strong {
+    color: #ffffff;
+}
+
+/* =========================
+   CLOSE BUTTON
+========================= */
+
+#close {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+
+    font-size: 24px;
+    cursor: pointer;
+
+    color: rgba(255, 255, 255, 0.7);
+
+    transition: 0.2s;
+}
+
+#close:hover {
+    color: #4fc3f7;
+    transform: scale(1.1);
+}
+
+/* =========================
+   LINK BUTTON
+========================= */
+
+#modal-link {
+    display: inline-block;
+    margin-top: 12px;
+
+    padding: 8px 14px;
+
+    background: rgba(79, 195, 247, 0.15);
+    border: 1px solid rgba(79, 195, 247, 0.4);
+
+    border-radius: 10px;
+
+    color: #7dd3fc;
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+#modal-link:hover {
+    background: rgba(79, 195, 247, 0.3);
+    color: white;
+}
+
+.modal-section {
+    margin-top: 14px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.modal-section h3 {
+    font-size: 0.95rem;
+    color: #4fc3f7;
+    margin-bottom: 6px;
+    letter-spacing: 0.5px;
+}
+
+.modal-section p {
+    font-size: 0.95rem;
+    color: #d8dee9;
+    line-height: 1.5;
+}
