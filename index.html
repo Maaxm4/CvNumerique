@@ -38,6 +38,7 @@
             <h1>Maxence Mangin</h1>
             <p class ="role">Étudiant en Informatique - BUT 2</p>
             <p class ="age">20 ans</p>
+            <p class ="recherche">Actuellement en stage chez LMH en développement application</p>
         </section>
 
         <section id="formations" class="block mercure">
@@ -159,12 +160,23 @@
                 <h2>Expériences</h2>
 
                 <div class="experience-item">
+                    <h3>Stage en Développement Application</h3>
+                    <span>2026</span>
+
+                    <ul>
+                        <li>Compréhension du fonctionnement d'applications backend et frontend </li>
+                        <li>Travail en équipe</li>
+                        <li>Sensibilisation à la sécurité des données</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
                     <h3>Stage d'immersion en Système et Réseau</h3>
                     <span>2024</span>
 
                     <ul>
-                        <li>Découverte de l'écosystème Big Data</li>
-                        <li>Observation de bases de données et flux d'informations</li>
+                        <li>Découverte de l'écosystème Système et Réseau</li>
+                        <li>Découverte de l'environnement</li>
                         <li>Sensibilisation à la cybersécurité</li>
                     </ul>
                 </div>
@@ -242,28 +254,35 @@
                         </div>
 
                         <div class="project-card"
-                            data-title="RPG Java"
-                            data-desc="Jeu de rôle avec combat, inventaire et stats."
+                            data-title="Jeu RPG Java - Méthode Agile"
+                            data-problem="Développer en équipe un jeu RPG en Java en seulement 3 jours, tout en respectant la méthode Agile et une organisation en sprints."
+                            data-desc="Projet de groupe (5 personnes) consistant à créer un jeu RPG en Java. Le projet était réalisé en 3 jours avec une forte contrainte de temps et une application stricte de la méthode Agile (répartition des tâches, sprints courts, collaboration)."
+                            data-solution="Organisation du travail en équipe via la méthode Agile avec découpage en sprints. Développement d'un jeu RPG en Java avec gestion de la logique de jeu, des combats et de la progression des personnages."
                             data-stack="Java / Agile"
-                            data-link="https://gitlab.univ-lille.fr/...">
+                            data-image=""
+                            data-link="https://github.com/Maaxm4/java-agile">
 
-                            <h4>RPG Java</h4>
-                            <p>Jeu de rôle avec combat et inventaire.</p>
+                            <h4>Jeu RPG Java - Agile</h4>
+                            <p>Jeu RPG développé en équipe en 3 jours avec méthode Agile.</p>
 
                             <div class="tags">
                                 <span>Java</span>
                                 <span>Agile</span>
+                                <span>Travail en équipe</span>
                             </div>
                         </div>
 
                         <div class="project-card"
-                            data-title="Site éco-conçu"
-                            data-desc="Site optimisé en performance et accessibilité."
+                            data-title="Site écologique - Nintendo"
+                            data-problem="Créer un site web pour une entreprise fictive (Nintendo) afin de promouvoir des pratiques écologiques et encourager des modes de déplacement durables."
+                            data-desc="Développement d'un site web éco-conçu pour sensibiliser à l'écologie. Le projet inclut un système de points récompensant les utilisateurs en fonction de leurs choix de déplacements responsables (vélo, marche, transports en commun, etc.). L'entreprise choisie pour le projet est Nintendo, adaptée ici dans une démarche fictive de transition écologique."
+                            data-solution="Mise en place d'un système avec des points écologiques. Les utilisateurs gagnent des points selon leurs modes de transport, encourageant des comportements plus respectueux de l'environnement."
                             data-stack="HTML / CSS"
-                            data-link="https://gitlab.univ-lille.fr/...">
+                            data-image=""
+                            data-link="https://github.com/Maaxm4/site-cologique">
 
-                            <h4>Site éco-conçu</h4>
-                            <p>Site web optimisé (performance + accessibilité).</p>
+                            <h4>Site écologique - Nintendo</h4>
+                            <p>Site web éco-responsable avec système de points et sensibilisation aux déplacements durables.</p>
 
                             <div class="tags">
                                 <span>HTML</span>
@@ -292,10 +311,11 @@
                         <div class="project-card"
                             data-title="Application bancaire (Python FastAPI)"
                             data-problem="Créer une application bancaire permettant de gérer des utilisateurs, comptes et transferts de manière sécurisée."
-                            data-desc="Développement d'une API REST complète permettant la gestion de comptes bancaires, la création d'utilisateurs et les transferts d'argent entre comptes. Architecture basée sur FastAPI avec séparation claire des couches (routes, services, modèles)."
+                            data-desc="Développement d'une API REST complète permettant la gestion de comptes bancaires, la création d'utilisateurs et les transferts d'argent entre comptes. Architecture basée sur FastAPI."
                             data-solution="Mise en place d'une API FastAPI avec SQLAlchemy pour la base de données, bcrypt pour la sécurité des mots de passe et une logique métier séparée pour assurer la maintenabilité."
                             data-stack="Python - FastAPI - SQLAlchemy - SQLite - Bcrypt - Angular"
-                            data-link="https://gitlab.univ-lille.fr/...">
+                            data-image="./img/banque.png"
+                            data-link="https://github.com/Maaxm4/bank-api">
 
                             <h4>Application bancaire</h4>
                             <p>API de gestion de comptes et transferts sécurisés.</p>
@@ -343,6 +363,12 @@
                         github.com/Maaxm4
                     </a>
                 </p>
+                
+                <p>
+                    <a href="./doc/Maxence_Mangin_CV.pdf">
+                        Télécharger CV
+                    </a>
+                </p>
 
             </div>
         </section>
@@ -353,6 +379,8 @@
                 <span id="close">&times;</span>
 
                 <h2 id="modal-title"></h2>
+
+                <img id="modal-image" class="modal-image" src="" alt="">
 
                 <div class="modal-section">
                     <h3>Problème</h3>

@@ -37,10 +37,14 @@ const modalLink = document.getElementById("modal-link");
 const modalProblem = document.getElementById("modal-problem");
 const modalSolution = document.getElementById("modal-solution");
 
+const modalImage = document.getElementById("modal-image");
+
 document.querySelectorAll(".project-card").forEach(card => {
     card.addEventListener("click", () => {
 
         modalTitle.textContent = card.dataset.title || "";
+
+        modalImage.src = card.dataset.image;
 
         if (modalProblem) {
             modalProblem.textContent = card.dataset.problem || "";
