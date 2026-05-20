@@ -32,6 +32,8 @@ const closeBtn = document.getElementById("close");
 const modalTitle = document.getElementById("modal-title");
 const modalDesc = document.getElementById("modal-desc");
 const modalStack = document.getElementById("modal-stack");
+const modalSoftSkill = document.getElementById("modal-soft-skill");
+const modalAnalyse = document.getElementById("modal-analyse");
 const modalLink = document.getElementById("modal-link");
 
 const modalProblem = document.getElementById("modal-problem");
@@ -57,6 +59,8 @@ document.querySelectorAll(".project-card").forEach(card => {
         }
 
         modalStack.textContent = "Stack : " + (card.dataset.stack || "");
+        modalSoftSkill.textContent = "Soft Skills : " + (card.dataset.softSkill || "");
+        modalAnalyse.textContent = (card.dataset.analyse || "");
 
         if (card.dataset.link) {
             modalLink.href = card.dataset.link;
